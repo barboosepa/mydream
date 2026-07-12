@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}My Dream - Home{% endblock %}
+
+{% block content %}
+    <header class="main-header">
+        <div class="container">
+            <h1>My Dream</h1>
+            <p>Welcome to our website for young Georgian writers.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        
+        {% if current_user.is_authenticated and current_user.is_admin %}
+            <div class="text-center mb-4">
+                <a href="{{ url_for('add_story') }}" class="btn btn-success">
+                    + ახალი მოთხრობის დამატება
+                </a>
+            </div>
+        {% endif %}
+
+        <h2 class="text-center mb-4">Random Story</h2>
+
+        <div class="story-box">
+            {% if story %}
+                <h3>{{ story.title }}</h3>
+                <p>{{ story.text }}</p>
+                <p class="mt-4">
+                    <strong>Author:</strong> {{ story.writer.name }}
+                </p>
+                
+                <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">
+                    Show Another Story
+                </a>
+            {% else %}
+                <p>ბაზაში მოთხრობები ჯერ არ მოიძებნება.</p>
+            {% endif %}
+        </div>
+    </main>
+{% endblock %}

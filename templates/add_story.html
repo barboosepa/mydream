@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}My Dream - Add Story{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+    <div class="about-box" style="max-width: 600px;">
+        <h2 class="mb-4">ახალი მოთხრობის დამატება</h2>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            
+            <div class="mb-3 text-start">
+                {{ form.title.label(class="form-label") }}
+                {{ form.title(class="form-control") }}
+            </div>
+            
+            <div class="mb-3 text-start">
+                {{ form.writer_id.label(class="form-label") }}
+                {{ form.writer_id(class="form-select") }}
+            </div>
+
+            <div class="mb-3 text-start">
+                {{ form.text.label(class="form-label") }}
+                {{ form.text(class="form-control", rows="6") }}
+            </div>
+            
+            {{ form.submit(class="btn btn-primary w-100") }}
+        </form>
+    </div>
+</main>
+{% endblock %}

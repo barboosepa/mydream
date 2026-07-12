@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}My Dream - Login{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+    <div class="about-box" style="max-width: 400px;">
+        <h2 class="mb-4">შესვლა</h2>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            
+            <div class="mb-3 text-start">
+                {{ form.username.label(class="form-label") }}
+                {{ form.username(class="form-control") }}
+            </div>
+            
+            <div class="mb-3 text-start">
+                {{ form.password.label(class="form-label") }}
+                {{ form.password(class="form-control") }}
+            </div>
+            
+            {{ form.submit(class="btn btn-primary w-100") }}
+        </form>
+    </div>
+</main>
+{% endblock %}

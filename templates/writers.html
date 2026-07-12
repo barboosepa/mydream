@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}My Dream - Writers{% endblock %}
+
+{% block content %}
+    <header class="page-header">
+        <div class="container">
+            <h1>Our Writers</h1>
+            <p>Meet the talented young Georgian writers.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        
+        {% if current_user.is_authenticated and current_user.is_admin %}
+            <div class="text-center mb-4">
+                <a href="{{ url_for('add_writer') }}" class="btn btn-success">
+                    + ახალი მწერლის დამატება
+                </a>
+            </div>
+        {% endif %}
+
+        <div class="row g-4">
+            {% for writer in writers %}
+            <div class="col-md-4">
+                <div class="writer-card">
+                    <div class="writer-photo">{{ writer.photo_initials }}</div>
+                    <h2>{{ writer.name }}</h2>
+                    <p>{{ writer.description }}</p>
+                </div>
+            </div>
+            {% else %}
+            <div class="col-12 text-center">
+                <p>ბაზაში მწერლები ჯერ არ არიან დამატებული.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

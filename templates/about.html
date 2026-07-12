@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}My Dream - About{% endblock %}
+
+{% block content %}
+    <header class="page-header">
+        <div class="container">
+            <h1>About Our Project</h1>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="about-box">
+            <h2>What is My Dream?</h2>
+            <p>My Dream is a simple website for young Georgian writers.</p>
+            <p>On this website, visitors can read short Georgian texts and learn more about each writer.</p>
+            <p>The main goal of the project is to help young writers share their ideas, stories and dreams.</p>
+            <p>The website has three pages: Home, Writers and About.</p>
+            <a href="{{ url_for('writers') }}" class="btn btn-primary">
+                See Our Writers
+            </a>
+        </div>
+    </main>
+{% endblock %}
