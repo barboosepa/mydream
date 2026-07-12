@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f1ff;
+    color: #333333;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.main-header,
+.page-header {
+    background-color: #7b5bc7;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.main-header h1,
+.page-header h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.story-box,
+.about-box {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #cccccc;
+    text-align: center;
+}
+
+.story-box h3 {
+    color: #6b48b5;
+    margin-bottom: 20px;
+}
+
+.story-box p {
+    line-height: 1.8;
+}
+
+.writer-name-button {
+    border: none;
+    background: none;
+    color: #6b48b5;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.writer-info {
+    display: none;
+    max-width: 650px;
+    margin: 35px auto 0;
+    padding: 25px;
+    background-color: white;
+    border: 2px solid #7b5bc7;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.writer-card {
+    height: 100%;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #cccccc;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.writer-card:hover {
+    transform: translateY(-5px);
+}
+
+.writer-card h2 {
+    font-size: 24px;
+    color: #6b48b5;
+}
+
+.writer-photo {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    background-color: #d8ccf5;
+    color: #5c3c9e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.about-box p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    background-color: #6b48b5;
+    border-color: #6b48b5;
+}
+
+.btn-primary:hover {
+    background-color: #52358f;
+    border-color: #52358f;
+}
+
+footer {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+img{
+    height: 57px;
+}
+footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .main-header h1,
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+    .story-box,
+    .about-box {
+        padding: 20px;
+    }
+}
